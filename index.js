@@ -99,4 +99,14 @@ let obj5 = {
     child2: "Max",
   },
 };
-//  ...in progress
+
+function getValueByPath(obj, path) {
+  let value = obj;
+
+  let valuePath = path.split(".");
+
+  for (let i = 0; i < valuePath.length; i++) {
+    value = value[valuePath[i]];
+  }
+  return value;
+}
